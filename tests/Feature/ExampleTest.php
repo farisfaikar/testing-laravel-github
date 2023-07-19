@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_failure(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(302);
+    }
 }
